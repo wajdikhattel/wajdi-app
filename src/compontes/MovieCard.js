@@ -1,11 +1,12 @@
 import React from "react";
 import {Card} from "react-bootstrap";
 import propTypes from "prop-types"
-
+import ReactStars from 'react-rating-stars-component';
 
 import "./MovieCard.css";
 
 const MovieCard = ({movie}) => {
+
   
   return (
     <div className="profile-card">
@@ -37,7 +38,7 @@ const MovieCard = ({movie}) => {
     </Card.Text>
     
   </Card.Body>
-  <Card.Footer>{movie.rate}</Card.Footer>
+  <Card.Footer><ReactStars value={movie.rate} edit={false}/></Card.Footer>
 </Card>
     </div>
   );
